@@ -18,9 +18,12 @@ const Movies = () => {
         console.log(`Year data in Movies.js ${selectedYear}`);
     };
 
-    const startEditMovieHandler = (movie) => {
+    const editMovieHandler = (movie) => {
         setMovieToEdit(movie);
     };
+
+    
+
     const stopEditMovieHandler = () => {
         setMovieToEdit(null); // Clear the movie to edit
     };
@@ -39,6 +42,7 @@ const Movies = () => {
             onAddMovie={addMovie}
             onEditMovie={editMovie}
             movieToEdit={movieToEdit}
+            onClearEditMovie={stopEditMovieHandler}
             onCancel={stopEditMovieHandler}
         />
         <MoviesFilter
@@ -48,9 +52,8 @@ const Movies = () => {
         />
         <MoviesList
             movies={filteredMovies}
-            onEditMovie={startEditMovieHandler} // Pass edit handler to the list
+            onEditMovie={editMovieHandler} // Pass edit handler to the list
         />
-            <MoviesList movies={filteredMovies} onEditMovie={editMovieHandler} />
         </Card>
     );
 }

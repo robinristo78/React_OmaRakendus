@@ -19,8 +19,16 @@ export const MovieProvider = ({children}) => {
         setMovies((prevMovies) => [...prevMovies, movie]);
     };
 
+    const editMovie = (updatedMovie) => {
+        setMovies((prevMovies) =>
+            prevMovies.map((movie) =>
+                movie.id === updatedMovie.id ? updatedMovie : movie
+            )
+        );
+    };
+
     return (
-        <MovieContext.Provider value={{movies, addMovie}}>
+        <MovieContext.Provider value={{movies, addMovie, editMovie}}>
             {children}
         </MovieContext.Provider>
     );

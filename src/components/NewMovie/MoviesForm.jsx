@@ -1,11 +1,11 @@
-import { Fragment, useRef, useState, useContext } from 'react';
+import { Fragment, useRef, useState, useContext, useEffect } from 'react';
 import Error from '../UI/Error.jsx';
 import MovieContext from '../MovieContext/MovieContext.jsx';
 import './MoviesForm.css';
 
 const MoviesForm = (props) => {
     const [error, setError] = useState(null);
-    const { addMovie } = useContext(MovieContext);
+    // const { addMovie } = useContext(MovieContext);
     console.log(error);
 
     const titleInputRef = useRef();
@@ -59,12 +59,21 @@ const MoviesForm = (props) => {
             props.onAddMovie(movieData);
         }
 
+        clearFormFields();
+        props.onCancel();
+    }
+
+    const clearFormFields = () => {
         titleInputRef.current.value = '';
         yearInputRef.current.value = '';
         genreInputRef.current.value = '';
         ratingInputRef.current.value = '';
+    };
+
+    const cancelHandler = () => {
+        clearFormFields();
         props.onCancel();
-    }
+    };
 
     return(
         <Fragment>
@@ -117,7 +126,7 @@ const MoviesForm = (props) => {
                         </div>
                     </div>
                     <div className='new-movie__actions'>
-                        <button type='button' onClick={props.onCancel}>Cancel</button>
+                        <button type='button' onClick={cancelHandler}>Cancel</button>
                         <button type="submit">
                             {props.movieToEdit ? 'Save Changes' : 'Add Movie'}
                         </button>

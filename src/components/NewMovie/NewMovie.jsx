@@ -1,6 +1,6 @@
 import './NewMovie.css';
 import MoviesForm from './MoviesForm.jsx';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const NewMovie = (props) => {
     const [editForm, setEditForm] = useState(false);
@@ -21,6 +21,7 @@ const NewMovie = (props) => {
     };
 
     const startFormHandler = () => {
+        props.onClearEditMovie();
         setEditForm(true);
         console.log('form edit open');
     };
@@ -30,12 +31,17 @@ const NewMovie = (props) => {
         console.log('form edit close');
     };
 
+    useEffect(() => {
+        if (props.movieToEdit) {
+            // startFormHandler();
+            setEditForm(true);
+        }
+    }, [props.movieToEdit]);
+
     return (
         <div className='new-movie'>
             {!editForm && (
-                <button onClick={startFormHandler}>
-                    {props.movieToEdit ? 'Edit Movie' : 'Add New Movie'}
-                </button>
+            <button onClick={startFormHandler}>Add New Movie</button>
             )}
             {editForm && (
                 <MoviesForm

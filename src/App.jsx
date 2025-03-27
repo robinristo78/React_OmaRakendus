@@ -18,7 +18,7 @@ const App = () => {
   return (
     <MovieProvider>
       <div className='App'>
-        <NewMovie />
+        {/* <NewMovie /> */}
         <Movies />
       </div>
     </MovieProvider>
