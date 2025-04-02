@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://robinristo78.github.io/React_OmaRakendus/",
+  "homepage": "https://robinristo78.github.io/React_OmaRakendus",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
