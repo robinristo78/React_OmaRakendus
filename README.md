@@ -74,7 +74,24 @@ The app persists movie data in `localStorage`:
 - On state updates, it saves the updated movie list to `localStorage`.
 
 ## Project Structure
-src/ ├── components/ │ ├── Movies/ │ │ ├── Movies.jsx │ │ ├── MoviesFilter.jsx │ │ ├── MoviesItem.jsx │ │ ├── MoviesList.jsx │ ├── NewMovie/ │ │ ├── NewMovie.jsx │ │ ├── MoviesForm.jsx │ ├── UI/ │ │ ├── Button.jsx │ │ ├── Card.jsx │ │ ├── Error.jsx │ ├── MovieContext/ │ │ ├── MovieContext.jsx ├── App.jsx ├── main.jsx
+src/
+├── components/
+│ ├── Movies/
+│ │ ├── Movies.jsx
+│ │ ├── MoviesFilter.jsx
+│ │ ├── MoviesItem.jsx
+│ │ ├── MoviesList.jsx
+│ ├── NewMovie/
+│ │ ├── NewMovie.jsx
+│ │ ├── MoviesForm.jsx
+│ ├── UI/
+│ │ ├── Button.jsx
+│ │ ├── Card.jsx
+│ │ ├── Error.jsx
+│ ├── MovieContext/
+│ │ ├── MovieContext.jsx
+├── App.jsx
+├── main.jsx
 
 ## Installation
 
