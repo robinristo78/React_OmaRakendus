@@ -111,5 +111,5 @@ src/
 
 ## Contributors
 - [@EgertL123](https://github.com/EgertL123)
-- taavi
+- [@TaaviOrro](https://github.com/TaaviOrro)
 - [@robinristo78](https://github.com/robinristo78)
