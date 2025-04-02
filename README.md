@@ -74,6 +74,7 @@ The app persists movie data in `localStorage`:
 - On state updates, it saves the updated movie list to `localStorage`.
 
 ## Project Structure
+```
 src/
 ├── components/
 │ ├── Movies/
@@ -92,6 +93,7 @@ src/
 │ │ ├── MovieContext.jsx
 ├── App.jsx
 ├── main.jsx
+```
 
 ## Installation
 
