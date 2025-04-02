@@ -1,7 +1,9 @@
 import './Movies.css'
-import MovieDate from './MovieDate.jsx';
 import Card from '../UI/Card.jsx'
 import { useState } from 'react';
+import './MovieItem.css';
+import MovieDate from './MovieDate.jsx';
+
 
 const MovieItem = (props) => {
     const [title, setTitle] = useState(props.movieData.title);
@@ -9,12 +11,11 @@ const MovieItem = (props) => {
 
     return (
         <li>
-            <Card className='expense-item'>
-                <MovieDate date={props.movieData.year}/>
-                <div className='expense-item__description'>
+            <Card className='movie-item'>
+                <div className='movie-item__description'>
                     <h2>{props.movieData.title}</h2>
-                    <div className='expense-item__price'>{props.movieData.genre}</div>
-                    <div className='expense-item__price'>{props.movieData.rating}</div>
+                    <div className='movie-item__price'>{props.movieData.genre}</div>
+                    <div className='movie-item__price'>{props.movieData.rating}</div>
                 </div>
                 <button onClick={props.onEditMovie}>Edit</button>
             </Card>

@@ -1,7 +1,9 @@
 .card {
-    background: rgba(16, 4, 35, 1);
+    background: rgba(30, 20, 50, 1);
     border-radius: 12px;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
     border: 2px solid transparent; 
-    border-image: linear-gradient(135deg, rgba(63, 94, 251, 1), rgba(252, 70, 107, 1)) 1; /* Blue to purple gradient */
+    border-image: linear-gradient(135deg, #4facfe, #9b59b6) 1;
+    overflow: hidden;
+    overflow-y: auto;
 }

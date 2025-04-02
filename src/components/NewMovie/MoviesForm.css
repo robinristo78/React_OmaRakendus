@@ -10,6 +10,8 @@
     font-weight: bold;
     margin-bottom: 0.5rem;
     display: block;
+    color: white;
+
 }
 
 .new-movie__control input {
