@@ -19,14 +19,14 @@ const Movies = () => {
     };
 
     const editMovieHandler = (movie) => {
-        setMovieToEdit(movie);
+        setMovieToEdit(null); // Clear the state first
+        setTimeout(() => setMovieToEdit(movie), 0); // Set the new movie after a short delay
     };
-
-    
 
     const stopEditMovieHandler = () => {
         setMovieToEdit(null); // Clear the movie to edit
     };
+
 
 
     useEffect(() => {
