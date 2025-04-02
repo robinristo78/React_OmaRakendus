@@ -48,15 +48,11 @@ This is a React-based movie management application built with Vite. The app allo
 - Dropdown to filter movies by release year.
 - Dynamically generates year options based on the available movies.
 
-### 7. **Error**
-- Modal component for displaying error messages.
-- Includes a backdrop and a dismiss button.
-
-### 8. **UI Components**
+### 7. **UI Components**
 - **Card**: A wrapper component for styling.
 - **Button**: A reusable button component.
 
-### 9. **MovieContext**
+### 8. **MovieContext**
 - Provides global state management for movies.
 - Includes methods to add and edit movies.
 - Syncs movie data with `localStorage`.
